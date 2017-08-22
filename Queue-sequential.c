@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXSIZE 10
+#define MAXSIZE 11
 #define OK 1
 #define ERROR 0
 #define TRUE 1
@@ -13,7 +13,7 @@ typedef struct
     QElemType data[MAXSIZE];
     int front;      /*头指针*/
     int rear;       /*尾指针,若队尾不为空，则指向队尾元素的下一个位置*/
-}SqQueue;           /*循环队列*/
+}SqQueue;           /*循环队列,大小为MAXSIZE-1*/
 
 Status InitQueue(SqQueue * Q);
 int QueueLength(SqQueue Q);
@@ -31,6 +31,12 @@ int main()
     }
     Display(Q);
     DeQueue(&Q,&e);
+    DeQueue(&Q,&e);
+    EnQueue(&Q,23);
+    EnQueue(&Q,233);
+    EnQueue(&Q,666);
+    EnQueue(&Q,2333);
+
     Display(Q);
 
     length =  QueueLength(Q);
