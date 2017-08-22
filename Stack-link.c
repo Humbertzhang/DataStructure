@@ -29,6 +29,7 @@ Status Pop(LinkStack * S,SElemType *e);
 Status EmptyStack(LinkStack S);
 Status DestoryStack(LinkStack * S);
 
+
 int main()
 {
     LinkStack S;
