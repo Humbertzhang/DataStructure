@@ -17,6 +17,7 @@ int main()
     for(int i = 1; i < len; i++)
         cin >> a[i];
     QuickSort(a, len);
+    cout << "Output:";
     for(int i = 1; i < len; i++)
         cout << a[i] << " ";
     cout << endl;
@@ -28,10 +29,11 @@ int Partition(int r[], int low, int high)
     r[0] = r[low]; //r[0]临时储存r[low],也即pivotkey的值,以便以后保存回正确位置
     int pivotkey = r[low];
     while(low < high){
-        while(low < high && r[high] > pivotkey)//对于大于pivotkey的high不处理
+        while(low < high && r[high] >= pivotkey)//对于大于pivotkey的high不处理
             high -= 1;
         if(low < high)//直到pivotkey小于high的值或high减到low了停止，并判断
             r[low++] = r[high]; //如果为第二种情况，则交换low所指元素与该元素
+
         while(low < high && r[low] <= pivotkey)//low大致一样
             low += 1;
         if(low < high)
@@ -53,5 +55,5 @@ void qsort(int r[], int s, int t)
 
 void QuickSort(int r [], int len)
 {
-    qsort(r, 1, len);
+    qsort(r, 1, len-1);
 }
