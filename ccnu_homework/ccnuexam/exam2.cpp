@@ -1,3 +1,6 @@
+/*1,根据前缀表达式构建一颗树 如 ABD##EG##H##C#F##
+ *2,检查它是否平衡
+ */
 #include <iostream>
 
 using namespace std;
