@@ -19,7 +19,7 @@ int main()
 	char* stra = "abcdefghijklmnopqrstuvwxyz";
 	char strb[STRBLEN];
 	int alen = 0, blen = 0;
-	cout << "input string b:";
+	cout << "请输入待检查字段:";
 	cin >> strb;
 	while(stra[alen] != '\0'){
 		alen += 1;
