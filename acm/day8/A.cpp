@@ -26,8 +26,6 @@ int main()
 		int checked = check(i, j);
 		if(checked < 26){
 			j += 1;
-		} else if(checked > 26) {
-			i += 1;
 		} else {
 			if(j-i+1 < minlen){
 				minlen = j-i+1;
